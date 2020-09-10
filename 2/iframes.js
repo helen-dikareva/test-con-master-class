@@ -8,5 +8,7 @@ test('Should apply caption changes', async t => {
         .switchToIframe('#demoFrame')
         .typeText('.dx-texteditor-input', 'Test Superhero', { replace: true })
 
-        .expect(Selector('.picture-container .text').textContent).eql('Test Superhero');
+        .expect(Selector('.picture-container .text').textContent).eql('Test Superhero')
+        
+        .switchToMainWindow();
 });
