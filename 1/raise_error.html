@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #button {
+            width: 423px;
+            height: 70px;
+            color: #ffffff;
+            background-color: #404142;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 65px;
+            text-align: center;
+            margin-top: 100px;
+            display: inline-block
+        }
+    </style>
+</head>
+<body>
+<div id="button">Click on it to raise an error</div>
+
+<script>
+    document.getElementById('button').addEventListener('mousedown', e => {
+        throw new Error('JS error on the page');
+    });
+</script>
+</body>
+</html>
